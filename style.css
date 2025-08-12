@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Fredoka", sans-serif;
+}
+
+:root {
+    --navbarHeight: 3.5em;
+    --textSizeLogo: 1.6rem;
+    --textSizeMenuItem: 1.1rem;
+}
+
+nav {
+    height: var(--navbarHeight);
+    width: 100%;
+    display: flex;
+    background-color: #00000020;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#section-logo {
+    height: var(--navbarHeight);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    background-color: #0000001f;
+    backdrop-filter: blur(6px);
+    padding-left: 30px;
+}
+
+.logo-text {
+    font-size: var(--textSizeLogo);
+    font-weight: 500;
+}
+
+#menu-toggle,
+#section-menu {
+    height: var(--navbarHeight);
+    flex: 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: #00000000;
+    backdrop-filter: blur(6px);
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.menu-items li {
+    list-style: none;
+}
+
+.menu-items li a {
+    font-size: var(--textSizeMenuItem);
+    color: white;
+    text-decoration: none;
+}
+
+#menu-toggle button:hover .menu-toggle-icons,
+.menu-items li:hover a,
+.menu-items button:hover .menu-toggle-icons {
+    color: #000000;
+    fill: #000000;
+    transition: 0.5s;
+}
+
+#open-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#close-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.c-dark-transparency {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #00000040;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-tab {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 12px;
+    align-items: center;
+    color: #ffffff;
+    background-color: #ffffff30;
+    backdrop-filter: blur(8px);
+    padding: 50px;
+    border: 1px solid #ffffff30;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.tab-grid {
+    width: 400px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+.section-tab .section-tab {
+    width: 120px;
+    padding: 25px;
+    row-gap: 8px;
+}
+
+.st-title {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.st-subtitle {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.st-description {
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 650px) {
+
+    #open-menu-button {
+        display: block;
+    }
+
+    #close-menu-button {
+        display: block;
+    }
+
+    #section-menu {
+        height: 100vh;
+        width: 75vw;
+        border: 1px solid #ffffff30;
+        border-top-left-radius: 2.5em;
+        border-bottom-left-radius: 2.5em;
+        align-items: flex-start;
+        justify-items: center;
+        padding: 0;
+        padding-top: 14px;
+        right: -100%;
+        transition: right 300ms ease-in-out;
+    }
+
+    #navMenuBGOverlay {
+        height: 100vh;
+        width: 100vw;
+        display: none;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+
+    .menu-items {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 8px;
+    }
+
+    .menu-items button {
+        padding: 14px 17px;
+        background-color: #ffffff40 !important;
+        border: 1px solid #ffffff30 !important;
+        border-radius: 10em;
+    }
+
+    .menu-items li {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .menu-items a {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding: 14px 0;
+        background-color: #ffffff40;
+        border: 1px solid #ffffff30;
+        border-radius: 10em;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .menu-items a:hover,
+    .menu-items button:hover {
+        background-color: #ffffff80 !important;
+    }
+
+    #section-menu.open {
+        right: 0;
+    }
+
+    #open-menu-button.open {
+        display: none;
+    }
+
+    #navMenuBGOverlay.active {
+        display: block;
+    }
+
+    .section-tab {
+        width: 50%;
+        padding: 25px;
+    }
+
+    .tab-grid {
+        width: 50%;
+    }
+
+    .section-tab .section-tab {
+        width: 65%;
+        padding: 15px;
+    }
+}
