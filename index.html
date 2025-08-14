@@ -11,25 +11,22 @@
 <body>
     <header>
         <nav>
-            <div id="navMenuBGOverlay" onclick="closeMenu()" aria-hidden="true"></div>
-            <div id="section-logo">
-                <p class="logo-text">CodeIM</p>
+            <div id="section-nav-logo">
+                <p>CodeIM</p>
             </div>
-            <div id="menu-toggle">
-                <button id="open-menu-button" onclick="openMenu()" aria-label="open menu" aria-expanded="false"
-                    aria-controls="section-menu">
-                    <svg class="menu-toggle-icons" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="28px"
+            <div id="nav-menu-drawer-out-area" onclick="closeNavMenuDrawer()"></div>
+            <div id="section-nav-menu">
+                <button id="nav-menu-open-btn" class="nav-menu-toggle" onclick="openNavMenuDrawer()">
+                    <svg class="nav-menu-btn-icon" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30px"
                         height="28px" viewBox="0 0 24.00 24.00">
                         <path
                             d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" />
                     </svg>
                 </button>
-            </div>
-            <div id="section-menu">
-                <ul class="menu-items">
-                    <li><button id="close-menu-button" onclick="closeMenu()" aria-label="close menu">
-                            <svg class="menu-toggle-icons" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
-                                width="28px" height="28px" viewBox="0 0 24.00 24.00">
+                <ul id="nav-menu-drawer">
+                    <li><button id="nav-menu-close-btn" class="nav-menu-toggle" onclick="closeNavMenuDrawer()">
+                            <svg class="nav-menu-btn-icon" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
+                                width="30px" height="28px" viewBox="0 0 24.00 24.00">
                                 <path
                                     d="M13.83 19a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1 1 0 0 1 1.54 1.28L10.29 12l4.32 5.36a1 1 0 0 1-.78 1.64z" />
                             </svg>

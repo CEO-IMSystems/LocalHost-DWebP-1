@@ -1,19 +1,19 @@
-function openMenu() {
-  document.getElementById('section-menu').classList.add('open');
-  document.getElementById('open-menu-button').classList.add('open');
-  document.getElementById('navMenuBGOverlay').classList.add('active');
-  document.getElementById('open-menu-button').setAttribute('aria-expanded', 'true');
+function openNavMenuDrawer() {
+  document.getElementById('nav-menu-open-btn').classList.add('If-IsVisible');
+  document.getElementById('nav-menu-drawer').classList.add('If-IsVisible');
+  document.getElementById('section-nav-menu').classList.add('If-IsVisible');
+  document.getElementById('nav-menu-drawer-out-area').classList.add('If-IsActive');
 }
 
-function closeMenu() {
-  document.getElementById('section-menu').classList.remove('open');
-  document.getElementById('open-menu-button').classList.remove('open');
-  document.getElementById('navMenuBGOverlay').classList.remove('active');
-  document.getElementById('open-menu-button').setAttribute('aria-expanded', 'false');
+function closeNavMenuDrawer() {
+  document.getElementById('nav-menu-open-btn').classList.remove('If-IsVisible');
+  document.getElementById('nav-menu-drawer').classList.remove('If-IsVisible');
+  document.getElementById('section-nav-menu').classList.remove('If-IsVisible');
+  document.getElementById('nav-menu-drawer-out-area').classList.remove('If-IsActive');
 }
 
-document.querySelectorAll(".menu-items li a").forEach(element => {
+document.querySelectorAll("#nav-menu-drawer li").forEach(element => {
   element.addEventListener("click", () => {
-    closeMenu();
+    closeNavMenuDrawer();
   })
 });
